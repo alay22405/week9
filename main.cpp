@@ -11,7 +11,6 @@ public:
     double area() const {
         return width * height;
     }
-
 private:
     double width;
     double height;
@@ -25,7 +24,6 @@ public:
     double area() const {
         return side * side;
     }
-
 private:
     double side;
 };
@@ -42,8 +40,8 @@ public:
 private:
     double radius;
 };
-
-void printArea(const Shape& shape) {
+template<class T>
+void printArea(const T& shape) {
     std::cout << shape.area() << "\n";
 }
 
