@@ -1,5 +1,10 @@
+//1. Static polymorphism is easier than dynamic to implement and use
+//2. Because I think it is the only possible to get static polymorphism using templates. 
+
+
 #include<vector>
 #include<string>
+
 #include <cmath>
 #include <iostream>
 
