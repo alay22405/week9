@@ -3,46 +3,46 @@
 #include <cmath>
 #include <iostream>
 
-class Shape {
-public:
-
-    virtual double area() const = 0;
-};
-class Rectangle : public Shape {
+class Rectangle {
 public:
     Rectangle(double width, double height)
         : width{ width }, height{ height } {
     }
-    double area() const override {
+    double area() const {
         return width * height;
     }
+
 private:
     double width;
     double height;
 };
-class Square : public Shape {
+
+class Square {
 public:
     Square(double side)
         : side{ side } {
     }
-    double area() const override {
+    double area() const {
         return side * side;
     }
+
 private:
     double side;
 };
 
-class Circle : public Shape {
+class Circle {
 public:
     Circle(double radius)
         : radius{ radius } {
     }
-    double area() const override {
-        return 2 * 3.141592654 * radius * radius;
+    double area() const {
+        return 3.141592654 * radius * radius;
     }
+
 private:
     double radius;
 };
+
 void printArea(const Shape& shape) {
     std::cout << shape.area() << "\n";
 }
